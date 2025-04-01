@@ -1,0 +1,13 @@
+name: April Fools
+
+on: [push]
+
+jobs:
+  permissions: write-all
+  runs-on: ubuntu-latest
+  steps:
+    - name: Check out Repository code
+      uses: actions/checkout@v4
+    - run: echo "The repository was checked out"
+    - name: April fools prank
+    - run: 
