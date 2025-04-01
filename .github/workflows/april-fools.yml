@@ -3,12 +3,13 @@ name: April Fools
 on: [push]
 
 jobs:
-  permissions: write-all
-  runs-on: ubuntu-latest
-  steps:
-    - name: Check out Repository code
-      uses: actions/checkout@v4
-    - run: echo "The repository was checked out"
-    - name: April fools prank
-    - run: sed -i "s/h1/h3/g" index.html
-    - run: echo "<!-- Get back to work slave -->" >> index.html
+  print:
+    permissions: write-all
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out Repository code
+        uses: actions/checkout@v4
+      - name: April fools prank
+        run: sed -i "s/h1/h3/g" index.html
+      - name: Add comment
+        run: echo "<!-- Get back to work slave -->" >> index.html
